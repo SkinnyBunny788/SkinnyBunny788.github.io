@@ -9,9 +9,9 @@ function startTimer() {
         let diff = goalDate - currentDate;
 
 
-        let days = Math.round(diff / (1000 * 60 * 60 * 24));
-        let hours = Math.round((diff / (1000 * 60 * 60) % 24));
-        let minutes = Math.round((diff / (1000 * 60) % 60));
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff / (1000 * 60 * 60) % 24));
+        let minutes = Math.floor((diff / (1000 * 60) % 60));
         let seconds = Math.round((diff / 1000) % 60);
 
         document.getElementById('days').innerHTML = days
