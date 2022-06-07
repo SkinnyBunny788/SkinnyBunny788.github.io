@@ -1,13 +1,11 @@
-
 function startTimer() {
-
     setInterval(function timer() { 
         document.getElementById('timerTitle').style = 'visibility: visible'
-        document.getElementById('timerTitle').innerText = document.getElementById('input').value;
+        let timerTitle = document.getElementById('input').value
+        document.getElementById('timerTitle').innerText = timerTitle.slice(0,timerTitle.indexOf('T'));
         let currentDate = new Date()
         let goalDate = new Date(document.getElementById('input').value)
         let diff = goalDate - currentDate;
-
 
         let days = Math.floor(diff / (1000 * 60 * 60 * 24));
         let hours = Math.floor((diff / (1000 * 60 * 60) % 24));
@@ -31,5 +29,6 @@ function startTimer() {
             document.getElementById('seconds').innerHTML = seconds
         }
     }, 1000);
+    console.log(new Date(document.getElementById('input').value))
 }
- 
+
