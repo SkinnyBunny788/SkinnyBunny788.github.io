@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-
+html {
+    height: 100%
+}
 body {
-    height: 100vh;
+
     padding: 0;
     margin: 0;
     display: flex;
@@ -16,14 +18,14 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+    margin-top: 3rem;
 }
 
 h1 {
     font-family: 'Kdam Thmor Pro', sans-serif;
     color: rgb(201, 201, 201);
     font-size: 5rem;
-    height : 15%;
+    height : 2.6rem;
     visibility: hidden;
 }
 
