@@ -13,22 +13,12 @@ function startTimer() {
         let seconds = Math.round((diff / 1000) % 60);
 
         document.getElementById('days').innerHTML = days
-        if (hours < 10) {
-            document.getElementById('hours').innerHTML = `0${hours}`
-        } else {
-            document.getElementById('hours').innerHTML = hours
-        }
-        if (minutes < 10) {
-            document.getElementById('minutes').innerHTML = `0${minutes}`
-        } else {
-            document.getElementById('minutes').innerHTML = minutes
-        }
-        if (seconds < 10) {
-            document.getElementById('seconds').innerHTML = `0${seconds}`
-        }  else {
-            document.getElementById('seconds').innerHTML = seconds
-        }
+        if (hours < 10) document.getElementById('hours').innerHTML = `0${hours}`
+        else document.getElementById('hours').innerHTML = hours
+        if (minutes < 10)document.getElementById('minutes').innerHTML = `0${minutes}`
+        else document.getElementById('minutes').innerHTML = minutes
+        if (seconds < 10) document.getElementById('seconds').innerHTML = `0${seconds}`
+        else document.getElementById('seconds').innerHTML = seconds
     }, 1000);
-    console.log(new Date(document.getElementById('input').value))
 }
 
